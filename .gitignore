@@ -3,3 +3,7 @@
 /dist
 /QNM034001 to QNM034000
 *.exe
+/data
+/__pycache__
+/__pycache__
+*.db
