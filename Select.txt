@@ -1,0 +1,2 @@
+--SELECT A.FileName, A.Fold, A.CheckFold, B.FileName as FileName1 FROM  View_CheckFold as A LEFT OUTER JOIN TempFiles As B on A.FileName=B.FileName and  A.Fold=B.Fold where FileName1 is NULL --DELETE
+--SELECT A.FileName, A.Fold, A.CheckFold, B.FileName as FileName1 FROM  TempFiles as A LEFT OUTER JOIN View_CheckFold As B on A.FileName=B.FileName and  A.Fold=B.Fold where FileName1 is NULL  --ADD

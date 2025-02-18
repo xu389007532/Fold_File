@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1078</width>
+    <height>793</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>網盤操作</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/ico_file/sourcefile/title.ico</normaloff>:/ico_file/sourcefile/title.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QLabel{
+	color: rgb(0, 0, 127);
+	font: 12pt &quot;Microsoft Sans Serif&quot;;
+}
+QComboBox{
+	font: 14pt &quot;Microsoft Sans Serif&quot;;
+}
+QLineEdit{
+font: 11pt &quot;Microsoft Sans Serif&quot;;
+}
+QTableView{
+	border-color: rgb(0, 85, 0);
+	
+	alternate-background-color: rgb(230, 201, 255);
+	background-color: rgb(199, 205, 255);
+/*	selection-background-color: rgb(85, 255, 0);*/
+
+}
+QPushButton{
+	/*background-color: rgb(170, 255, 127);*/
+	
+	font: 16pt &quot;Microsoft Sans Serif&quot;;
+	
+	background-color: rgb(239, 239, 119);
+}
+QCheckBox{
+font: 12pt &quot;Microsoft Sans Serif&quot;;
+	color: rgb(255, 85, 0);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>611</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_Status">
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(0, 170, 0);</string>
+          </property>
+          <property name="text">
+           <string>狀態</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_encoding_2">
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>共享盘路徑</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="3">
+         <widget class="QLineEdit" name="lineEdit_Network_path">
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_encoding">
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>查找文件</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEdit_Network">
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff00ff;&quot;&gt;查找可以*? &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ff00ff;&quot;&gt;星號(*)表示任意個字符&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ff00ff;&quot;&gt;問號(?)表示單個字符&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_CopyToLocal">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>可以選擇多個文件(用Shift 或Ctrl)</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(85, 170, 0);</string>
+          </property>
+          <property name="text">
+           <string>下載選擇文件到本地</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>C:/Users/ITProg02/.designer/backup/sourcefile/open2.png</normaloff>C:/Users/ITProg02/.designer/backup/sourcefile/open2.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButton_Dele_network">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>可以選擇多個文件(用Shift 或Ctrl)</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 0, 255);</string>
+          </property>
+          <property name="text">
+           <string>刪除選擇的文件</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>C:/Users/ITProg02/.designer/backup/sourcefile/open2.png</normaloff>C:/Users/ITProg02/.designer/backup/sourcefile/open2.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="4">
+         <widget class="QTableView" name="tableView">
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_encoding_4">
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(170, 0, 255);</string>
+          </property>
+          <property name="text">
+           <string>本地路徑</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_Local_path">
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_encoding_3">
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(170, 0, 255);</string>
+          </property>
+          <property name="text">
+           <string>查找文件</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="lineEdit_Local">
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ff00ff;&quot;&gt;查找可以*? &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ff00ff;&quot;&gt;星號(*)表示任意個字符&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ff00ff;&quot;&gt;問號(?)表示單個字符&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_UploadToNewwork">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft Sans Serif</family>
+            <pointsize>16</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>可以選擇多個文件(用Shift 或Ctrl)</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(85, 170, 255);</string>
+          </property>
+          <property name="text">
+           <string>選擇的文件上傳到共享盤</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>C:/Users/ITProg02/.designer/backup/sourcefile/open2.png</normaloff>C:/Users/ITProg02/.designer/backup/sourcefile/open2.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="3">
+         <widget class="QTableView" name="tableView_2">
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1078</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <stylestrategy>PreferDefault</stylestrategy>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="title">
+     <string extracomment="功能選項">配置</string>
+    </property>
+    <addaction name="actionupdate"/>
+    <addaction name="actionDelete_File"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actiona">
+   <property name="text">
+    <string>設置打開文件路徑</string>
+   </property>
+  </action>
+  <action name="actionupdate">
+   <property name="text">
+    <string>更新共享盤和本地路徑</string>
+   </property>
+   <property name="iconText">
+    <string>更新共享盤和本地路徑</string>
+   </property>
+  </action>
+  <action name="actionDelete_File">
+   <property name="text">
+    <string>是否啟用刪除功能</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit_Network</tabstop>
+  <tabstop>pushButton_CopyToLocal</tabstop>
+  <tabstop>pushButton_Dele_network</tabstop>
+  <tabstop>lineEdit_Local</tabstop>
+  <tabstop>pushButton_UploadToNewwork</tabstop>
+  <tabstop>lineEdit_Network_path</tabstop>
+  <tabstop>lineEdit_Local_path</tabstop>
+  <tabstop>tableView</tabstop>
+  <tabstop>tableView_2</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resourcefile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<userCommon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <serverType>LIVE</serverType>
+  <userIDSQL>2NFvtPWqmjZlpqtphIB+Hg==</userIDSQL>
+  <userPWDSQL>99NgaUSmYDyeKlbzT6HpDw==</userPWDSQL>
+  <serverName>HonourSQL02\HonourSQL</serverName>
+  <databaseName>HMPSQL01</databaseName>
+</userCommon>
