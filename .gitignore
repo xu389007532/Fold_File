@@ -9,3 +9,8 @@
 *.db
 /__pycache__
 /__pycache__
+/.idea
+*.db
+*.db
+/__pycache__
+*.db
